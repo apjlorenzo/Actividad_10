@@ -26,6 +26,7 @@ do
                 break;
             case 2:
                 Console.Clear();
+                telefono.MostrarTelefonos();
                 Console.ReadKey();
                 break;
             case 3:
