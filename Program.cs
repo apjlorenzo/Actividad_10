@@ -53,16 +53,45 @@ try
                     break;
                 case 3:
                     Console.Clear();
+                    Console.Write("Ingrese el tipo de producto que quiere buscar (1.Teléfono, 2.Ordenador, 3.Tablet): ");
+                    int tipoProductoBuscar = int.Parse(Console.ReadLine());
+                    if (tipoProductoBuscar == 1)
+                    {
+                        telefono.BuscarTelefono();
+                    }
+                    else if (tipoProductoBuscar == 2)
+                    {
+                        ordenador.BuscarOrdenador();
+                    }
+                    else if (tipoProductoBuscar == 3)
+                    {
+                        tablet.BuscarTablet();
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("No es una opción válida");
+                        Console.ReadKey();
+                    }
                     Console.ReadKey();
                     break;
                 case 4:
                     menuCondition = false;
                     break;
+                default:
+                    Console.Clear();
+                    Console.WriteLine("No es una opción válida, vuelve a intentarlo.");
+                    Console.WriteLine("\nPresione cualquier tecla para continuar: ");
+                    Console.ReadKey();
+                    break;
             }
         }
         catch (Exception ex)
         {
+            Console.Clear();
             Console.WriteLine(ex.Message);
+            Console.WriteLine("\nPresione cualquier tecla para continuar: ");
+            Console.ReadKey();
         }
 
     }

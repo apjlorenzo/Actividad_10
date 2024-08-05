@@ -48,5 +48,26 @@ namespace Actividad_Herencia
                 Console.WriteLine($"El stock del producto: {telefono.Stock} unidades");
             }
         }
+        public void BuscarTelefono()
+        {
+            Console.WriteLine("Ingrese el nombre del producto que quiere buscar: ");
+            string nombre = Console.ReadLine();
+            Telefono encontrar = listTelefonos.Find(p=>p.Name == nombre);
+            if (encontrar != null)
+            {
+                Console.WriteLine("Información del producto: ");
+                Console.WriteLine($"El ID del producto: {encontrar.Id}");
+                Console.WriteLine($"El nombre del producto: {encontrar.Name}");
+                Console.WriteLine($"El precio del producto: Q{encontrar.Price}");
+                Console.WriteLine($"El stock del producto: {encontrar.Stock} unidades");
+                Console.WriteLine("Productos registrados correctamente.");
+                Console.WriteLine("\nPresione cualquier tecla para continuar: ");
+
+            }
+            else
+            {
+                Console.WriteLine("No hay ningun producto con ese nombre.");
+            }
+        }
     }
 }
