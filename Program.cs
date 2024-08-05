@@ -1,5 +1,6 @@
 ﻿using Actividad_Herencia;
 Telefono telefono = new Telefono(0,null,0,0);
+Ordenador ordenador = new Ordenador(0, null, 0, 0);
 bool menuCondition = true;
 try
 {
@@ -27,11 +28,10 @@ try
                     }
                     else if (tipoProducto == 2)
                     {
-
+                        ordenador.RegistrarOrdenador();
                     }
                     else if (tipoProducto == 3)
                     {
-
                     }
                     else
                     {
@@ -44,6 +44,8 @@ try
                 case 2:
                     Console.Clear();
                     telefono.MostrarTelefonos();
+                    ordenador.MostrarOrdenador();
+                    Console.WriteLine("\nPresione cualquier tecla para continuar: ");
                     Console.ReadKey();
                     break;
                 case 3:
