@@ -1,6 +1,5 @@
 ﻿using Actividad_Herencia;
-
-List<Telefono> listelefonos = new List<Telefono>();
+Telefono telefono = new Telefono(0,null,0,0);
 bool menuCondition = true;
 do
 {
@@ -10,17 +9,37 @@ do
     Console.WriteLine("2. Mostrar todos los productos registrados.");
     Console.WriteLine("3. Buscar producto por nombre.");
     Console.Write("Escriba una opción: ");
-    int option = int.Parse(Console.ReadLine());
-    switch(option)
+    try
     {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 4:
-            break;
+        int option = int.Parse(Console.ReadLine());
+        switch (option)
+        {
+            case 1:
+                Console.Clear();
+                Console.Write("Ingrese el tipo de producto que quiere ingresar (1.Teléfono, 2.Ordenador, 3.Tablet): ");
+                int tipoProducto = int.Parse(Console.ReadLine());
+                if (tipoProducto == 1)
+                {
+                    telefono.RegistrarTelefonos();
+                }
+                Console.ReadKey();
+                break;
+            case 2:
+                Console.Clear();
+                Console.ReadKey();
+                break;
+            case 3:
+                Console.Clear();
+                Console.ReadKey();
+                break;
+            case 4:
+                menuCondition = false;
+                break;
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
     }
 
 }

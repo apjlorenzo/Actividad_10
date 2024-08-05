@@ -8,14 +8,14 @@ namespace Actividad_Herencia
 {
     public class Telefono : Producto
     {
-        public List<Telefono> listTelefonos { get; set; }
+        List<Telefono> listTelefonos = new List<Telefono>();
         int id = 5020;
         public int Id { get; set; }
         public Telefono(int id, string nombre, double precio, int stock)
         {
             Id = id;
-            Nombre = nombre;
-            Precio = precio;
+            Name = nombre;
+            Price = precio;
             Stock = stock;
         }
         public void RegistrarTelefonos()

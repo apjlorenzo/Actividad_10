@@ -8,15 +8,8 @@ namespace Actividad_Herencia
 {
     public class Producto
     {
-        public string Nombre { get; set; }
-        public double Precio { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
         public int Stock { get; set; }
-
-        public void PedirProductos()
-        {
-            Console.Write("Ingrese el tipo de producto que quiere ingresar (1.Teléfono, 2.Ordenador, 3.Tablet): ");
-            int tipoProducto = int.Parse(Console.ReadLine());            
-         
-        }
     }
 }
